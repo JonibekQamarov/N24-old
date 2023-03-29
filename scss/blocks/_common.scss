@@ -1,0 +1,147 @@
+/* GLOBAL */
+:root {
+  --primary-bg-color: #fff;
+  --main-bg-color: #f6f6f6;
+  --navbar-text-color: #515151;
+  --secondary-bg-color: #295093;
+  --text-color: #000;
+  --time-color: #6b6d97;
+  --secondary-text-color: #202020;
+  --footer-color: #fff;
+  --accent-color: #285193;
+  --accent-dark: #133c82; 
+  --primary-font-family: "Rubik", "Arial", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 2px dashed black;
+  outline-offset: 3px;
+  // box-shadow: 0 0 0 4px rgba(41, 80, 147, 0.4);
+}
+
+img {
+  display: block;
+}
+
+body {
+  height: 100%;
+  font-family: var(--primary-font-family);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: var(--primary-bg-color);
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: $tablet) {
+   margin-top: 68px;
+  }
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: $desktop;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  flex-grow: 1;
+  padding: 25px 0;
+}
+
+/* SCROLL BAR */
+::-webkit-scrollbar {
+  @media only screen and (min-width: $tablet) {
+    width: 12px;
+  }
+}
+
+::-webkit-scrollbar-track {
+  @media only screen and (min-width: $tablet) {
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px grey;
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  @media only screen and (min-width: $tablet) {
+    background: rgb(110, 110, 110);
+    border-radius: 10px;
+
+    &:hover {
+      background: rgb(110, 110, 110);
+    }
+  }
+}
+
+/* VISUALLY HIDDEN */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+/* BUTTON */
+.button {
+  border: none;
+  display: inline-block;
+  white-space: nowrap;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--secondary-bg-color);
+  padding: 10px 31px;
+  color: var(--primary-bg-color);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: normal;
+}
+
+/* TEG SUB BUTTON */
+.tg-btn {
+  padding: 9px 12px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: background-color .4s ease;
+}
+
+
+/* RETINA DISPLAY */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+}
